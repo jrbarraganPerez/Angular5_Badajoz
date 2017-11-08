@@ -1,0 +1,13 @@
+<div>
+  <h2>Ejemplo de pipes</h2>
+  <p>El nombre en minuscula es: {{sNombre | lowercase}}</p>
+  <p>El nombre en mayuscula es: {{sNombre | uppercase}}</p>
+  <p>El nombre es: {{sNombre | titlecase}}</p>
+  <p>Precio: {{nPrecio | currency}}</p>
+  <p>Porcentaje: {{nPercent | percent: "2.2"}}</p>
+  <p>Número: {{nNumero | number: "2.2-2"}}</p>
+  <p>Fecha de hoy: {{dFecha | date: "fullDate"}}</p>
+  <div>
+    Libro: <pre>{{oLibro | json}}</pre>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div>
+  <p>
+    <input type="text"
+    placeholder="Búsqueda en un servicio propio"
+    [(ngModel)]="sClave">
+  </p>
+  <p>
+    <button (click)="buscar()">Buscar (servico propio)</button>
+  </p>
+  <div *ngIf="aLibros.length">
+    <h2>Lista de ideas</h2>
+    <ul>
+      <li *ngFor="let libro of aLibros">{{libro}}</li>
+    </ul>
+  </div>
+
+</div>

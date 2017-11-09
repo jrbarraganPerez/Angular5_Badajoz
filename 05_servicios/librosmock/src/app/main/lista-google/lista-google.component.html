@@ -1,0 +1,19 @@
+<div>
+  <h2>Busqueda real en Google</h2>
+<p>
+  <input type="text"
+  placeholder="Escribe la palabra a buscar"
+  [(ngModel)]="sClave">
+</p>
+<p>
+  <button (click)="buscarPromesa()">Buscar (Promesas)</button>
+  <button (click)="buscarReactive()">Buscar (Reactive)</button>
+</p>
+<div *ngIf="aLibros.length">
+  <h2>Lista de libros</h2>
+  <ul>
+    <li *ngFor="let libro of aLibros">{{libro}}</li>
+  </ul>
+</div>
+
+</div>

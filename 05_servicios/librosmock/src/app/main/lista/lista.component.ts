@@ -17,6 +17,19 @@ export class ListaComponent implements OnInit {
   }
 
   buscar() {
-    this.aLibros = this.librosService.buscarLibros(this.sClave);
+    /*this.aLibros = this.librosService.buscarLibros(this.sClave);*/
+    this.librosService.buscarLibrosAync(this.sClave)
+    .then(JSON.parse)
+    .then(
+    /*Función que se ejecuta si promesa OK*/
+    (response) => {
+      this.aLibros = response;
+    },
+    /*Función que se ejecuta si promesa KO*/
+    (error) => {
+      console.log('Error en la llamda al servicio');
+
+    }
+    );
   }
 }

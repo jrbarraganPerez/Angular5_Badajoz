@@ -1,7 +1,10 @@
-import { FormsModule } from '@angular/forms';
+import { ListaServiceComponent } from './lista-service/lista-service.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ListaComponent } from './lista/lista.component';
+import { ListaAsyncComponent } from './lista-async/lista-async.component';
+import { ListaGoogleComponent } from './lista-google/lista-google.component';
 
 @NgModule({
   imports: [
@@ -9,13 +12,16 @@ import { ListaComponent } from './lista/lista.component';
     FormsModule
   ],
   declarations: [
-  ListaComponent,
-
-  ],
-  exports: [
     ListaComponent,
-
-  ]
-
+    ListaAsyncComponent,
+    ListaGoogleComponent,
+    ListaServiceComponent
+    ],
+  exports : [
+    ListaComponent,
+    ListaAsyncComponent,
+    ListaGoogleComponent,
+    ListaServiceComponent
+  ],
 })
 export class MainModule { }
